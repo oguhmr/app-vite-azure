@@ -5,6 +5,8 @@ import heroImg from '../assets/hero.png'
 import vueLogo from '../assets/vue.svg'
 
 const count = ref(0)
+//console.log('VITE_API_URL:', import.meta.env.VITE_API_URL);
+const url = import.meta.env.VITE_API_URL;
 </script>
 
 <template>
@@ -16,6 +18,7 @@ const count = ref(0)
     </div>
     <div>
       <h1>Get started</h1>
+      <p>Dato de variable de entorno: {{ url }}</p>
       <p>Edit <code>src/App.vue</code> and save to test <code>HMR</code></p>
     </div>
     <button class="counter" @click="count++">Count is {{ count }}</button>
